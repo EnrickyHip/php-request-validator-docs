@@ -1,38 +1,40 @@
+import { Theme } from './styledComponents';
+
 export enum ThemeMode {
   LIGHT = 'LIGHT',
   DARK = 'DARK',
 }
 
-export const lightTheme = {
+export const lightTheme: Theme = {
   colors: {
     background: {
       primary: '#F5F5F5',
-      primaryDarker: '#E1E1E1',
-      secondary: '#71438B',
-      secondaryDarker: '#59376C',
+      primaryDarker: '#DDDDDD',
+      secondary: '#693F81',
+      secondaryDarker: '#5D3772',
     },
     text: {
       primary: '#111',
       primaryDarker: '#000',
       secondary: '#F5F5F5',
-      secondaryDarker: '#E1E1E1',
+      secondaryDarker: '#DDDDDD',
     },
   },
 };
 
-export const darkTheme = {
+export const darkTheme: Theme = {
   colors: {
     background: {
-      primary: '#71438B',
-      primaryDarker: '#59376C',
+      primary: '#693F81',
+      primaryDarker: '#5D3772',
       secondary: '#252525',
       secondaryDarker: '#111111',
     },
     text: {
       primary: '#252525',
       primaryDarker: '#111111',
-      secondary: '#71438B',
-      secondaryDarker: '#59376C',
+      secondary: '#693F81',
+      secondaryDarker: '#5D3772',
     },
   },
 };
