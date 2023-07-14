@@ -8,16 +8,16 @@ export enum ThemeMode {
 export const lightTheme: Theme = {
   colors: {
     background: {
-      primary: '#F5F5F5',
-      primaryDarker: '#DDDDDD',
-      secondary: '#693F81',
-      secondaryDarker: '#5D3772',
-    },
-    text: {
-      primary: '#111',
-      primaryDarker: '#000',
+      primary: '#693F81',
+      primaryDarker: '#5D3772',
       secondary: '#F5F5F5',
       secondaryDarker: '#DDDDDD',
+    },
+    text: {
+      primary: '#F5F5F5',
+      primaryDarker: '#DDDDDD',
+      secondary: '#111',
+      secondaryDarker: '#000',
     },
   },
 };
@@ -31,10 +31,10 @@ export const darkTheme: Theme = {
       secondaryDarker: '#111111',
     },
     text: {
-      primary: '#252525',
-      primaryDarker: '#111111',
-      secondary: '#693F81',
-      secondaryDarker: '#5D3772',
+      primary: '#F5F5F5',
+      primaryDarker: '#DDDDDD',
+      secondary: '#252525',
+      secondaryDarker: '#111111',
     },
   },
 };

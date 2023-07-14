@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const HeaderContainer = styled.header`
-  background-color: ${({ theme }) => theme.colors.background.secondary};
+  background-color: ${({ theme }) => theme.colors.background.primary};
   padding: 10px;
   position: fixed;
   width: 100%;
@@ -32,7 +32,7 @@ export const HeaderItem = styled.div`
   gap: 20px;
 
   & > a:hover {
-    color: ${({ theme }) => theme.colors.text.secondaryDarker};
+    color: ${({ theme }) => theme.colors.text.primaryDarker};
     transition: 0.2s ease-in-out;
   }
 `;
@@ -52,6 +52,6 @@ export const ThemeIcon = styled.div`
 
   &:hover {
     cursor: pointer;
-    background-color: ${({ theme }) => theme.colors.background.secondary};
+    background-color: ${({ theme }) => theme.colors.background.primaryDarker};
   }
 `;
