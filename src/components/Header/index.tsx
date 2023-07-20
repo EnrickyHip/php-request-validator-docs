@@ -16,7 +16,7 @@ function Header() {
   return (
     <Styled.HeaderContainer>
       <Styled.HeaderItem>
-        <Link href={'/'}>
+        <Link href="/">
           <Styled.Logo>
             <GoVerified size={30} />
             <Styled.Title>PHP Request Validator</Styled.Title>
@@ -26,11 +26,11 @@ function Header() {
       </Styled.HeaderItem>
 
       <Styled.HeaderItem>
-        <Link href="https://github.com/EnrickyHip/php-request-validator" target="_blank">
+        <a href="https://github.com/EnrickyHip/php-request-validator" target="_blank" rel="noreferrer">
           <AiFillGithub size={30} />
-        </Link>
+        </a>
         <Styled.ThemeIcon onClick={toggleTheme}>
-          {mode === ThemeMode.DARK ? <BsFillSunFill size={20} /> : <BsFillMoonFill size={20} />}
+          {mode === ThemeMode.DARK ? <BsFillMoonFill size={20} /> : <BsFillSunFill size={20} />}
         </Styled.ThemeIcon>
       </Styled.HeaderItem>
     </Styled.HeaderContainer>
