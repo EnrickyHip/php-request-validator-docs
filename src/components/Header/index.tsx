@@ -1,4 +1,3 @@
-import * as Styled from './styled';
 import Link from 'next/link';
 import { GoVerified } from 'react-icons/go';
 import { AiFillGithub } from 'react-icons/ai';
@@ -6,6 +5,7 @@ import { useThemeContext } from '@/Context';
 import { ThemeMode } from '@/styles/theme';
 import { BsFillMoonFill, BsFillSunFill } from 'react-icons/bs';
 import { ThemeTypeAction } from '@/Context/reducer';
+import { HeaderContainer, HeaderItem, Logo, ThemeIcon, Title } from './styled';
 
 function Header() {
   const { state, dispatch } = useThemeContext();
@@ -14,26 +14,25 @@ function Header() {
   const toggleTheme = () => dispatch({ type: ThemeTypeAction.TOGGLE_THEME });
 
   return (
-    <Styled.HeaderContainer>
-      <Styled.HeaderItem>
+    <HeaderContainer>
+      <HeaderItem>
         <Link href="/">
-          <Styled.Logo>
+          <Logo>
             <GoVerified size={30} />
-            <Styled.Title>PHP Request Validator</Styled.Title>
-          </Styled.Logo>
+            <Title>PHP Request Validator</Title>
+          </Logo>
         </Link>
-        <Styled.Version>1.0.0</Styled.Version>
-      </Styled.HeaderItem>
+      </HeaderItem>
 
-      <Styled.HeaderItem>
+      <HeaderItem>
         <a href="https://github.com/EnrickyHip/php-request-validator" target="_blank" rel="noreferrer">
           <AiFillGithub size={30} />
         </a>
-        <Styled.ThemeIcon onClick={toggleTheme}>
+        <ThemeIcon onClick={toggleTheme}>
           {mode === ThemeMode.DARK ? <BsFillMoonFill size={20} /> : <BsFillSunFill size={20} />}
-        </Styled.ThemeIcon>
-      </Styled.HeaderItem>
-    </Styled.HeaderContainer>
+        </ThemeIcon>
+      </HeaderItem>
+    </HeaderContainer>
   );
 }
 
