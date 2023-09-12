@@ -1,6 +1,19 @@
 import styled, { css } from 'styled-components';
 
-export const SubMenuContainer = styled.div``;
+interface SubMenuContainerProps {
+  collapse: boolean;
+  level: number;
+}
+
+export const SubMenuContainer = styled.div<SubMenuContainerProps>`
+  ${({ collapse, level }) => css`
+    visibility: ${collapse ? 'hidden' : 'auto'};
+
+    a {
+      padding-left: ${25 * level}px;
+    }
+  `}
+`;
 
 export const SubMenuArrow = styled.i`
   ${({ theme }) => css`
