@@ -1,13 +1,13 @@
 import styled, { css } from 'styled-components';
 
 interface SubMenuContainerProps {
-  collapse: boolean;
   level: number;
 }
 
 export const SubMenuContainer = styled.div<SubMenuContainerProps>`
-  ${({ collapse, level }) => css`
-    visibility: ${collapse ? 'hidden' : 'auto'};
+  ${({ level }) => css`
+    overflow: hidden;
+    transition: all 300ms ease-in-out;
 
     a {
       padding-left: ${25 * level}px;
