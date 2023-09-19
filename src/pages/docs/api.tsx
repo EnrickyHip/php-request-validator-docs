@@ -1,5 +1,5 @@
-import Header from '@/components/Header';
+import { Layout } from '@/components/Layout';
 
 export default function Api() {
-  return <Header tab="api" />;
+  return <Layout>a</Layout>;
 }

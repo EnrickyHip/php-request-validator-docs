@@ -53,7 +53,7 @@ export const HeaderItem = styled.div`
   gap: 20px;
 
   a:hover {
-    color: ${({ theme }) => theme.colors.text.primaryDarker};
+    color: ${({ theme }) => theme.colors.text.colorHover};
     transition: 0.2s ease-in-out;
   }
 `;

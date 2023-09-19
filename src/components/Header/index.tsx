@@ -6,8 +6,7 @@ import { ThemeMode } from '@/styles/theme';
 import { BsFillMoonFill, BsFillSunFill } from 'react-icons/bs';
 import { ThemeTypeAction } from '@/Context/reducer';
 import { HeaderContainer, HeaderItem, InnerMenuItem, InnerNav, Logo, Nav, ThemeIcon, Title } from './styled';
-
-type Tab = 'docs' | 'api';
+import { Tab } from '../Layout';
 
 interface HeaderProps {
   tab?: Tab;
