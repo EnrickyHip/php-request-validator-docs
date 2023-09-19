@@ -37,7 +37,7 @@ function Header({ tab = 'docs' }: HeaderProps) {
               <Link href="/docs">Docs</Link>
             </InnerMenuItem>
             <InnerMenuItem active={tab === 'api'}>
-              <Link href="/api">API</Link>
+              <Link href="/docs/api">API</Link>
             </InnerMenuItem>
           </InnerNav>
           <a href="https://github.com/EnrickyHip/php-request-validator" target="_blank" rel="noreferrer">
