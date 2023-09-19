@@ -1,18 +1,12 @@
 import styled, { css } from 'styled-components';
 
-interface SubMenuContainerProps {
-  level: number;
-}
+export const SubMenuContainer = styled.div`
+  overflow: hidden;
+  transition: all 300ms ease-in-out;
 
-export const SubMenuContainer = styled.div<SubMenuContainerProps>`
-  ${({ level }) => css`
-    overflow: hidden;
-    transition: all 300ms ease-in-out;
-
-    a {
-      padding-left: ${25 * level}px;
-    }
-  `}
+  a {
+    padding-left: ${40}px;
+  }
 `;
 
 export const SubMenuArrow = styled.i`

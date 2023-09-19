@@ -6,10 +6,9 @@ import { MenuItemLi, MenuLink } from '../MenuItem/styled';
 interface SubMenuProps {
   children: React.ReactNode;
   title: string;
-  level?: number;
 }
 
-export function SubMenu({ children, title, level = 0 }: SubMenuProps) {
+export function SubMenu({ children, title }: SubMenuProps) {
   const [collapsed, setCollapsed] = useState(true);
   const submenuRef = useRef<HTMLDivElement>(null);
 
@@ -30,7 +29,7 @@ export function SubMenu({ children, title, level = 0 }: SubMenuProps) {
         <SubMenuArrow />
         {title}
       </MenuLink>
-      <SubMenuContainer level={level} ref={submenuRef}>
+      <SubMenuContainer ref={submenuRef}>
         <MenuList>{children}</MenuList>
       </SubMenuContainer>
     </MenuItemLi>

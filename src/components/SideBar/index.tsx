@@ -7,8 +7,10 @@ export function SideBar() {
     <AsideContainer>
       <SideBarNav>
         <MenuList>
-          <SubMenu level={1} title="Getting Started">
-            <MenuItem href="/overview">Overview</MenuItem>
+          <SubMenu title="Getting Started">
+            <MenuItem href="/overview">Introduction</MenuItem>
+            <MenuItem href="/installation">Installation</MenuItem>
+            <MenuItem href="/">First Validation</MenuItem>
           </SubMenu>
         </MenuList>
       </SideBarNav>

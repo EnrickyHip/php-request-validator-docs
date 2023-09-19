@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const HeaderContainer = styled.header`
   background-color: ${({ theme }) => theme.colors.background.primary};
@@ -7,13 +7,33 @@ export const HeaderContainer = styled.header`
   width: 100%;
   z-index: 2;
   color: white;
-  display: flex;
-  justify-content: space-between;
 
   a {
     text-decoration: none;
     color: white;
   }
+`;
+
+export const Nav = styled.nav`
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const InnerNav = styled.ul`
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 20px;
+`;
+
+interface InnerMenuItemProps {
+  active?: boolean;
+}
+
+export const InnerMenuItem = styled.li<InnerMenuItemProps>`
+  ${({ active }) => css`
+    font-weight: ${active ? '600' : 'auto'};
+  `}
 `;
 
 export const Title = styled.h1`
@@ -32,7 +52,7 @@ export const HeaderItem = styled.div`
   align-items: center;
   gap: 20px;
 
-  & > a:hover {
+  a:hover {
     color: ${({ theme }) => theme.colors.text.primaryDarker};
     transition: 0.2s ease-in-out;
   }
