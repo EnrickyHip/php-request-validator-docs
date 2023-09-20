@@ -3,12 +3,15 @@ import { MenuItemLi, MenuLink } from './styled';
 interface MenuItemProps {
   children: React.ReactNode;
   href: string;
+  active: boolean;
 }
 
-export function MenuItem({ children, href }: MenuItemProps) {
+export function MenuItem({ children, href, active }: MenuItemProps) {
   return (
     <MenuItemLi>
-      <MenuLink href={href}>{children}</MenuLink>
+      <MenuLink active={active} href={href}>
+        {children}
+      </MenuLink>
     </MenuItemLi>
   );
 }

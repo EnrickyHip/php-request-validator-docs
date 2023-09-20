@@ -1,5 +1,14 @@
-import { Layout } from '@/components/Layout';
+import { GetStaticProps } from 'next';
 
 export default function Docs() {
-  return <Layout tab="docs">a</Layout>;
+  return null;
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  return {
+    redirect: {
+      destination: '/docs/introduction',
+      permanent: true,
+    },
+  };
+};
