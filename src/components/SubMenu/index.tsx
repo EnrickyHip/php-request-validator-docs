@@ -25,7 +25,7 @@ export function SubMenu({ children, title }: SubMenuProps) {
 
   return (
     <MenuItemLi>
-      <MenuLink href="" onClick={() => setCollapsed(!collapsed)}>
+      <MenuLink active={false} href="" onClick={() => setCollapsed(!collapsed)}>
         <SubMenuArrow />
         {title}
       </MenuLink>

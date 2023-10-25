@@ -20,9 +20,6 @@ export function SideBar({ tab }: SideBarProps) {
               <MenuItem active={router.pathname === '/docs/introduction'} href="/docs/introduction">
                 Introduction
               </MenuItem>
-              <MenuItem active={router.pathname === '/docs/installation'} href="/docs/installation">
-                Installation
-              </MenuItem>
               <MenuItem active={router.pathname === '/docs/first-validation'} href="/docs/first-validation">
                 First Validation
               </MenuItem>

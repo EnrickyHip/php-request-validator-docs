@@ -7,6 +7,10 @@ export const HeaderContainer = styled.header`
   width: 100%;
   z-index: 2;
   color: white;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 62px;
 
   a {
     text-decoration: none;
