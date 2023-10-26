@@ -7,6 +7,7 @@ export const GlobalStyles = createGlobalStyle`
     outline: none;
     box-sizing: border-box;
     font-family: system-ui, Arial, sans-serif;
+    scroll-behavior: smooth;
   }
 
   body {

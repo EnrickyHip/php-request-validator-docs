@@ -17,6 +17,7 @@ interface PageIndexItemProps {
 
 export const PageIndexLink = styled.a<PageIndexItemProps>`
   text-decoration: none;
+  transition: 0.2s ease-in-out;
 
   ${({ theme, active }) => css`
     color: ${active ? theme.colors.text.selected : theme.colors.text.primaryDarker};

@@ -1,9 +1,23 @@
 import PageIndex from '@/components/PageIndex';
-import { PageIndexLink } from '@/components/PageIndex/styled';
 import { Article } from '@/components/UI/Article';
 import DocumentationPage from '@/templates/Docs';
 
 export default function Introduction() {
+  const sections = [
+    {
+      id: 'introduction',
+      name: 'Introduction',
+    },
+    {
+      id: 'features',
+      name: 'Features',
+    },
+    {
+      id: 'installation',
+      name: 'Installation',
+    },
+  ];
+
   return (
     <DocumentationPage>
       <Article>
@@ -65,25 +79,33 @@ export default function Introduction() {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque beatae sint repellat molestiae, ea cum sed
             reprehenderit dicta enim. Natus est officiis voluptate veniam ea nemo ullam corrupti, quidem expedita!
           </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe officiis sint pariatur totam atque tempora
+            facere nostrum ratione animi architecto obcaecati nemo odit ea ipsa rem corrupti, iure doloribus maiores?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque beatae sint repellat molestiae, ea cum sed
+            reprehenderit dicta enim. Natus est officiis voluptate veniam ea nemo ullam corrupti, quidem expedita!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe officiis sint pariatur totam atque tempora
+            facere nostrum ratione animi architecto obcaecati nemo odit ea ipsa rem corrupti, iure doloribus maiores?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque beatae sint repellat molestiae, ea cum sed
+            reprehenderit dicta enim. Natus est officiis voluptate veniam ea nemo ullam corrupti, quidem expedita!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe officiis sint pariatur totam atque tempora
+            facere nostrum ratione animi architecto obcaecati nemo odit ea ipsa rem corrupti, iure doloribus maiores?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque beatae sint repellat molestiae, ea cum sed
+            reprehenderit dicta enim. Natus est officiis voluptate veniam ea nemo ullam corrupti, quidem expedita!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe officiis sint pariatur totam atque tempora
+            facere nostrum ratione animi architecto obcaecati nemo odit ea ipsa rem corrupti, iure doloribus maiores?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque beatae sint repellat molestiae, ea cum sed
+            reprehenderit dicta enim. Natus est officiis voluptate veniam ea nemo ullam corrupti, quidem expedita!
+          </p>
         </section>
       </Article>
-      <PageIndex>
-        <li>
-          <PageIndexLink active href="#introduction">
-            Introduction
-          </PageIndexLink>
-        </li>
-        <li>
-          <PageIndexLink active={false} href="#features">
-            Features
-          </PageIndexLink>
-        </li>
-        <li>
-          <PageIndexLink active={false} href="#installation">
-            Installation
-          </PageIndexLink>
-        </li>
-      </PageIndex>
+      <PageIndex sections={sections} />
     </DocumentationPage>
   );
 }
