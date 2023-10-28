@@ -17,10 +17,10 @@ export function SideBar({ tab }: SideBarProps) {
         <MenuList>
           {tab === 'docs' && (
             <SubMenu title="Getting Started">
-              <MenuItem active={router.pathname === '/docs/introduction'} href="/docs/introduction">
+              <MenuItem $active={router.pathname === '/docs/introduction'} href="/docs/introduction">
                 Introduction
               </MenuItem>
-              <MenuItem active={router.pathname === '/docs/first-validation'} href="/docs/first-validation">
+              <MenuItem $active={router.pathname === '/docs/first-validation'} href="/docs/first-validation">
                 First Validation
               </MenuItem>
             </SubMenu>
