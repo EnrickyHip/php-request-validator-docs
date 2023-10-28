@@ -12,5 +12,6 @@ export const GlobalStyles = createGlobalStyle`
 
   body {
     background-color: ${({ theme }) => theme.colors.background.secondary};
+    transition: background-color 0.2s ease-in-out;
   }
 `;

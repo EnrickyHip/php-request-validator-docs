@@ -1,7 +1,4 @@
-export enum ThemeMode {
-  LIGHT = 'LIGHT',
-  DARK = 'DARK',
-}
+export type ThemeMode = 'LIGHT' | 'DARK';
 
 export const lightTheme = {
   colors: {
@@ -48,16 +45,3 @@ export const darkTheme: Theme = {
     border: 'rgb(85, 85, 85)',
   },
 };
-
-export const getTheme = (): ThemeMode => {
-  const storedTheme = localStorage.getItem('theme');
-
-  if (!storedTheme) {
-    return ThemeMode.LIGHT;
-  }
-
-  const theme = storedTheme as keyof typeof ThemeMode;
-  return ThemeMode[theme];
-};
-
-export const saveTheme = (mode: ThemeMode) => localStorage.setItem('theme', mode.toString());
