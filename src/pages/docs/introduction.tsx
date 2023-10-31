@@ -1,3 +1,4 @@
+import Code from '@/components/Code';
 import PageIndex from '@/components/PageIndex';
 import { Article } from '@/components/UI/Article';
 import DocumentationPage from '@/templates/Docs';
@@ -25,13 +26,14 @@ export default function Introduction() {
         <section id="introduction">
           <h2>Introduction</h2>
           <p>
-            PHP Request Validator is a simple and flexible library for validating HTTP request body for PHP
+            PHP Request Validator is a simple and flexible standalone library for validating HTTP request body for PHP
             applications. It allows you to validate either JSON or form-data bodies specifing its expected fields and
             adding rules for them.
           </p>
           <p>
-            It allows you to define which field should come in a request body and comes with many predefined rules to
-            add for each field, but also suports the creation of their own specific validation rules.
+            It allows you to define which fields are expected in a request body and comes with many predefined rules to
+            add for each field, but also suports the creation of your own specific validation rules. PHP Request
+            Validator uses the <strong>method chaining</strong> pattern for adding new rules for your fields.
           </p>
         </section>
 
@@ -49,10 +51,10 @@ export default function Introduction() {
               elements inside it.
             </li>
             <li>
-              <strong>File validation:</strong> Validate uploaded files, checking for file types and lenghts.
+              <strong>File validation:</strong> Validate uploaded files, checking for file types and lengths.
             </li>
             <li>
-              <strong>Type validation:</strong> Specify the data type of each field for type checking in strict or
+              <strong>Data Type validation:</strong> Specify the data type of each field for type checking in strict or
               non-strict modes.
             </li>
             <li>
@@ -67,42 +69,8 @@ export default function Introduction() {
 
         <section id="installation">
           <h2>Installation</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe officiis sint pariatur totam atque tempora
-            facere nostrum ratione animi architecto obcaecati nemo odit ea ipsa rem corrupti, iure doloribus maiores?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque beatae sint repellat molestiae, ea cum sed
-            reprehenderit dicta enim. Natus est officiis voluptate veniam ea nemo ullam corrupti, quidem expedita!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe officiis sint pariatur totam atque tempora
-            facere nostrum ratione animi architecto obcaecati nemo odit ea ipsa rem corrupti, iure doloribus maiores?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque beatae sint repellat molestiae, ea cum sed
-            reprehenderit dicta enim. Natus est officiis voluptate veniam ea nemo ullam corrupti, quidem expedita!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe officiis sint pariatur totam atque tempora
-            facere nostrum ratione animi architecto obcaecati nemo odit ea ipsa rem corrupti, iure doloribus maiores?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque beatae sint repellat molestiae, ea cum sed
-            reprehenderit dicta enim. Natus est officiis voluptate veniam ea nemo ullam corrupti, quidem expedita!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe officiis sint pariatur totam atque tempora
-            facere nostrum ratione animi architecto obcaecati nemo odit ea ipsa rem corrupti, iure doloribus maiores?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque beatae sint repellat molestiae, ea cum sed
-            reprehenderit dicta enim. Natus est officiis voluptate veniam ea nemo ullam corrupti, quidem expedita!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe officiis sint pariatur totam atque tempora
-            facere nostrum ratione animi architecto obcaecati nemo odit ea ipsa rem corrupti, iure doloribus maiores?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque beatae sint repellat molestiae, ea cum sed
-            reprehenderit dicta enim. Natus est officiis voluptate veniam ea nemo ullam corrupti, quidem expedita!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe officiis sint pariatur totam atque tempora
-            facere nostrum ratione animi architecto obcaecati nemo odit ea ipsa rem corrupti, iure doloribus maiores?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque beatae sint repellat molestiae, ea cum sed
-            reprehenderit dicta enim. Natus est officiis voluptate veniam ea nemo ullam corrupti, quidem expedita!
-          </p>
+          <p>Request Validator is on packagist. Install it using composer:</p>
+          <Code language="markup">$ composer require enricky/request-validator</Code>
         </section>
       </Article>
       <PageIndex sections={sections} />
