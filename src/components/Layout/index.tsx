@@ -1,3 +1,4 @@
+import Footer from '../Footer';
 import Header from '../Header';
 import { SideBar } from '../SideBar';
 import { Content } from './styled';
@@ -15,6 +16,7 @@ export const Layout = ({ children, tab }: LayoutInterface) => {
       <Header tab={tab} />
       <SideBar tab={tab} />
       <Content>{children}</Content>
+      <Footer />
     </>
   );
 };
