@@ -6,11 +6,11 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0;
     outline: none;
     box-sizing: border-box;
-    font-family: system-ui, Arial, sans-serif;
     scroll-behavior: smooth;
   }
 
   body {
+    font-family: system-ui, Arial, sans-serif;
     background-color: ${({ theme }) => theme.colors.background.secondary};
     transition: background-color 0.2s ease-in-out;
   }

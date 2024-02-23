@@ -70,7 +70,7 @@ export default function Introduction() {
         <section id="installation">
           <h2>Installation</h2>
           <p>Request Validator is on packagist. Install it using composer:</p>
-          <Code language="markup">$ composer require enricky/request-validator</Code>
+          <Code language="shell">$ composer require enricky/request-validator</Code>
         </section>
       </Article>
       <PageIndex sections={sections} />
