@@ -1,7 +1,8 @@
 import Code from '@/components/Code';
+import { DocumentationLayout, Layout } from '@/components/Layout';
 import PageIndex from '@/components/PageIndex';
 import { Article } from '@/components/UI/Article';
-import DocumentationPage from '@/templates/Docs';
+import { ReactElement } from 'react';
 
 export default function Introduction() {
   const sections = [
@@ -20,7 +21,7 @@ export default function Introduction() {
   ];
 
   return (
-    <DocumentationPage>
+    <>
       <Article>
         <h1>PHP Request Validator</h1>
         <section id="introduction">
@@ -74,6 +75,8 @@ export default function Introduction() {
         </section>
       </Article>
       <PageIndex sections={sections} />
-    </DocumentationPage>
+    </>
   );
 }
+
+Introduction.getLayout = DocumentationLayout;
