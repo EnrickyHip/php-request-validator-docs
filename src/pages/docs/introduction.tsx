@@ -1,8 +1,8 @@
 import Code from '@/components/Code';
-import { DocumentationLayout, Layout } from '@/components/Layout';
+import { DocumentationLayout } from '@/components/Layout';
 import PageIndex from '@/components/PageIndex';
 import { Article } from '@/components/UI/Article';
-import { ReactElement } from 'react';
+import { SimpleCode } from '@/components/UI/SimpleCode';
 
 export default function Introduction() {
   const sections = [
@@ -70,7 +70,11 @@ export default function Introduction() {
 
         <section id="installation">
           <h2>Installation</h2>
-          <p>Request Validator is on packagist. Install it using composer:</p>
+          <p>Request Validator is on Packagist. So first you need to set up your composer project:</p>
+          <Code language="shell">$ composer init</Code>
+          <p>
+            Then install the package using <SimpleCode>composer require</SimpleCode>:
+          </p>
           <Code language="shell">$ composer require enricky/request-validator</Code>
         </section>
       </Article>
