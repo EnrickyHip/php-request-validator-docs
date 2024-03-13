@@ -2,7 +2,7 @@ import { ThemeContextProvider } from '@/Context/ThemeContext';
 import Footer from '../Footer';
 import Header from '../Header';
 import { SideBar } from '../SideBar';
-import { Content } from './styled';
+import { GridContainer, MainContent } from './styled';
 import { GlobalStyles } from '@/styles/globalStyles';
 import { ReactElement } from 'react';
 
@@ -18,8 +18,10 @@ export const Layout = ({ children, tab }: LayoutInterface) => {
     <ThemeContextProvider>
       <GlobalStyles />
       <Header tab={tab} />
-      <SideBar tab={tab} />
-      <Content>{children}</Content>
+      <GridContainer>
+        <SideBar tab={tab} />
+        <MainContent>{children}</MainContent>
+      </GridContainer>
       <Footer />
     </ThemeContextProvider>
   );
