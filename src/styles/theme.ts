@@ -19,7 +19,8 @@ export const lightTheme = {
       colorHover: '#DDDDDD',
       selected: '#703292',
     },
-    border: 'rgb(200, 200, 200)',
+    border: '#C8C8C8',
+    borderSecondary: '#d2d2d2',
   },
 };
 
@@ -44,6 +45,7 @@ export const darkTheme: Theme = {
       colorHover: '#DDDDDD',
       selected: '#B589CE',
     },
-    border: 'rgb(85, 85, 85)',
+    border: '#555',
+    borderSecondary: '#8c8c8c',
   },
 };

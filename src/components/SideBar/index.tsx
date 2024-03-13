@@ -16,14 +16,21 @@ export function SideBar({ tab }: SideBarProps) {
       <SideBarNav>
         <MenuList>
           {tab === 'docs' && (
-            <SubMenu title="Getting Started">
-              <MenuItem $active={router.pathname === '/docs/introduction'} href="/docs/introduction">
-                Introduction
-              </MenuItem>
-              <MenuItem $active={router.pathname === '/docs/first-validation'} href="/docs/first-validation">
-                First Validation
-              </MenuItem>
-            </SubMenu>
+            <>
+              <SubMenu title="Getting Started">
+                <MenuItem $active={router.pathname === '/docs/introduction'} href="/docs/introduction">
+                  Introduction
+                </MenuItem>
+              </SubMenu>
+              <SubMenu title="Error Messages">
+                <MenuItem
+                  $active={router.pathname === '/docs/error-messages/getting-errors'}
+                  href="/docs/error-messages/getting-errors"
+                >
+                  Getting Errors
+                </MenuItem>
+              </SubMenu>
+            </>
           )}
         </MenuList>
       </SideBarNav>
