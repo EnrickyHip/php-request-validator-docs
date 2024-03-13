@@ -25,7 +25,7 @@ const getThemeMode = (): ThemeMode => {
 const saveTheme = (mode: ThemeMode) => localStorage.setItem('theme', mode);
 
 export const ThemeContextProvider = ({ children }: ThemeContextProviderProps) => {
-  const [mode, setMode] = useState<ThemeMode>('LIGHT');
+  const [mode, setMode] = useState<ThemeMode | null>(null);
 
   useEffect(() => {
     const mode = getThemeMode();
@@ -37,6 +37,10 @@ export const ThemeContextProvider = ({ children }: ThemeContextProviderProps) =>
     setMode(newMode);
     saveTheme(newMode);
   };
+
+  if (!mode) {
+    return null;
+  }
 
   const theme = mode === 'DARK' ? darkTheme : lightTheme;
   const context = { mode, toggleTheme };
