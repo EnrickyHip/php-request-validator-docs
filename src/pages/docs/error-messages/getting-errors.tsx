@@ -30,8 +30,8 @@ export default function GettingErrors() {
           </p>
           <Code language="php">
             {`$data = [
-  "name" => "Jon",
-  "email" => "jon@email.com"
+    "name" => "Jon",
+    "email" => "jon@email.com"
 ];
 
 $userRequest = new UserRequest($data);
@@ -48,28 +48,34 @@ $isValid = $userRequest->validate();`}
             You can simply get the error messages of your request by calling the method{' '}
             <SimpleCode>getErrors()</SimpleCode>. It will return an array of strings, which represent all caught errors:
           </p>
-          <Code language="php">{`$data = [];
+          <Code language="php">
+            {`$data = [];
 
 $userRequest = new UserRequest($data);
 $errors = $userRequest->getErrors();
 
-print_r($errors);`}</Code>
+print_r($errors);`}
+          </Code>
         </section>
         <p>
           As the user did not send any field, it will return an array with two error messages, one for each invalid
           field:
         </p>
-        <Code language="markdown">{`Array
+        <Code language="markdown">
+          {`Array
 (
     [0] => field 'name' is required
     [1] => field 'email' is required
-)`}</Code>
+)`}
+        </Code>
         <p>
           If all fields are valid, this method is going to return an empty array. It allows you to know the validity of
           your request checking if the error messages array is empty or not:
         </p>
-        <Code language="php">{`$isValid = empty($userRequest->getErrors());
-var_dump($isValid); // bool(false)`}</Code>
+        <Code language="php">
+          {`$isValid = empty($userRequest->getErrors());
+var_dump($isValid); // bool(false)`}
+        </Code>
         <p>Another example of error messages, with invalid type and e-mail:</p>
         <Code language="php">{`$data = [
     "name" => 1,
@@ -81,11 +87,13 @@ $errors = $userRequest->getErrors();
 
 print_r($errors);`}</Code>
         <p>Output:</p>
-        <Code language="markdown">{`Array
+        <Code language="markdown">
+          {`Array
 (
     [0] => field 'name' is not of type 'string'
     [1] => field 'email' is not a valid email address
-)`}</Code>
+)`}
+        </Code>
       </Article>
       <PageIndex sections={sections} />
     </>

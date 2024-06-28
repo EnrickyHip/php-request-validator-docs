@@ -21,6 +21,9 @@ export function SideBar({ tab }: SideBarProps) {
                 <MenuItem $active={router.pathname === '/docs/introduction'} href="/docs/introduction">
                   Introduction
                 </MenuItem>
+                <MenuItem $active={router.pathname === '/docs/first-validation'} href="/docs/first-validation">
+                  Your First Validation
+                </MenuItem>
               </SubMenu>
               <SubMenu title="Error Messages">
                 <MenuItem
@@ -28,6 +31,23 @@ export function SideBar({ tab }: SideBarProps) {
                   href="/docs/error-messages/getting-errors"
                 >
                   Getting Errors
+                </MenuItem>
+                <MenuItem
+                  $active={router.pathname === '/docs/error-messages/custom-error-messages'}
+                  href="/docs/error-messages/custom-error-messages"
+                >
+                  Custom Error Messages
+                </MenuItem>
+              </SubMenu>
+              <SubMenu title="Basic Rules">
+                <></>
+              </SubMenu>
+              <SubMenu title="Field Validation">
+                <MenuItem
+                  $active={router.pathname === '/docs/field-validation/creating-a-field-validator'}
+                  href="/docs/field-validation/creating-a-field-validator"
+                >
+                  Creating a Field Validator
                 </MenuItem>
               </SubMenu>
             </>

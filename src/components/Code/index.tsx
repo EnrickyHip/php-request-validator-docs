@@ -25,7 +25,7 @@ function Code({ children, language, copy = true }: Props) {
 
   const style: CSSProperties = {
     borderRadius: '5px',
-    fontSize: '15px',
+    fontSize: '14px',
     padding: '20px',
     fontFamily: 'monospace',
     marginBottom: '20px',

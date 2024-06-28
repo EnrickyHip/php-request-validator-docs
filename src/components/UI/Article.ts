@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 export const Article = styled.article`
   ${({ theme }) => css`
     padding: 40px 80px;
+    margin-bottom: 80px;
 
     h1 {
       font-size: 45px;

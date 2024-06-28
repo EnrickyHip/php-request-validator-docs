@@ -4,6 +4,7 @@ export const PageIndexAside = styled.aside``;
 
 export const PageIndexList = styled.ul`
   position: sticky;
+  padding-right: 20px;
   top: 76px;
   list-style: none;
   display: flex;
